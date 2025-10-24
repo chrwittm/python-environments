@@ -1,0 +1,16 @@
+# quarto-blogging.yml
+# -------------------------------------------------------------------
+# Environment for blog authoring and Quarto-based publishing.
+# Includes nbdev for literate programming and Quarto CLI for rendering.
+# -------------------------------------------------------------------
+
+name: quarto-blogging
+
+channels:
+  - conda-forge     # primary open-source channel with Apple Silicon builds
+  - fastai
+
+dependencies:
+  - python=3.12
+  - nbdev           # from fastai channel
+  - quarto          # Quarto CLI for rendering/publishing

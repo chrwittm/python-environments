@@ -1,0 +1,20 @@
+# playground.yml
+# -------------------------------------------------------------------
+# Lightweight baseline environment for quick experiments and testing.
+# Created on: 2025-10-14
+# Python: 3.12 (Apple Silicon / conda-forge build)
+# -------------------------------------------------------------------
+
+name: playground
+
+channels:
+  - conda-forge     # primary open-source channel with Apple Silicon builds
+
+dependencies:
+  - python=3.12
+  - ipython         # enhanced REPL
+  - jupyterlab      # notebook / lab environment
+  - ipywidgets      # interactive widgets for Jupyter
+  - numpy           # numerical computing
+  - pandas          # data analysis
+  - matplotlib      # plotting library

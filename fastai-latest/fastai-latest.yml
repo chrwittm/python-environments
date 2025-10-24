@@ -1,0 +1,33 @@
+# fastai-latest.yml
+# -------------------------------------------------------------------
+# FastAI + PyTorch (latest stable versions)
+# Apple Silicon (ARM64) compatible
+# Uses pip for PyTorch wheels (official MPS-enabled builds)
+# -------------------------------------------------------------------
+
+name: fastai-latest
+
+channels:
+  - conda-forge
+  - fastai
+
+dependencies:
+  # --- Core environment ---
+  - python=3.12
+  - ipython
+  - jupyterlab
+  - ipywidgets
+  - numpy
+  - pandas
+  - matplotlib
+  - sentencepiece
+
+  # --- FastAI libraries ---
+  - fastai
+  - fastbook
+
+  # --- pip fallback for PyTorch (official source for macOS ARM) ---
+  - pip
+  - pip:
+      - torch
+      - torchvision
