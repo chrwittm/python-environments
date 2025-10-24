@@ -13,4 +13,4 @@ channels:
 dependencies:
   - python=3.12
   - nbdev           # from fastai channel
-  - quarto          # Quarto CLI for rendering/publishing
+  - quarto<1.8      # Quarto CLI for rendering/publishing
