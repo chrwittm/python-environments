@@ -1,0 +1,38 @@
+name: claude-code
+# Created: 2026-03-03
+# Purpose: Python environment for Claude Code with full Office document processing capabilities
+# Python 3.12 on Apple Silicon with conda-forge
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.12
+  - pip
+
+  # Core Python packages for Office documents
+  - pip:
+    # Excel spreadsheets
+    - openpyxl      # Create, read, edit Excel files
+    - pandas        # Data analysis and manipulation
+    - xlsxwriter    # Excel file creation with formatting
+
+    # PDF documents
+    - pypdf         # PDF manipulation (merge, split, extract)
+    - pdfplumber    # Extract text and tables from PDFs
+    - reportlab     # Create PDFs from scratch
+
+    # Word documents
+    - lxml          # XML processing for docx manipulation
+
+    # PowerPoint presentations
+    - markitdown[pptx]  # Read and convert presentations
+    - Pillow        # Image processing for presentations
+
+    # Optional: Data visualization (for Excel charts)
+    - matplotlib    # Plotting library
+    - seaborn       # Statistical data visualization
+
+    # Optional: OCR for scanned PDFs
+    - pytesseract   # Python wrapper for Tesseract OCR
+    - pdf2image     # Convert PDF pages to images
