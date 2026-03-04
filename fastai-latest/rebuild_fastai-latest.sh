@@ -18,7 +18,7 @@ fi
 conda remove -n fastai-latest --all -y || true
 
 # Recreate from YAML
-mamba env create -f fastai-latest.yml
+conda env create -f fastai-latest.yml
 
 echo ""
 echo "✅ FastAI-Latest environment rebuilt successfully."

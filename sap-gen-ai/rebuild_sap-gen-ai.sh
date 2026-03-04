@@ -10,7 +10,7 @@ source ../helpers/ensure_no_env.sh
 conda remove -n sap-gen-ai --all -y || true
 
 # Recreate from YAML
-mamba env create -f sap-gen-ai.yml
+conda env create -f sap-gen-ai.yml
 
 echo "✅ SAP Generative AI environment rebuilt successfully."
 echo ""

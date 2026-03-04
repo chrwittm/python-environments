@@ -10,7 +10,7 @@ source ../helpers/ensure_no_env.sh
 conda remove -n quarto-blogging --all -y || true
 
 # Recreate from YAML
-mamba env create -f quarto-blogging.yml
+conda env create -f quarto-blogging.yml
 
 echo "✅ Quarto-blogging environment rebuilt successfully."
 echo ""

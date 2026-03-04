@@ -10,7 +10,7 @@ source ../helpers/ensure_no_env.sh
 conda remove -n playground --all -y || true
 
 # Recreate from YAML
-mamba env create -f playground.yml
+conda env create -f playground.yml
 
 echo "✅ Playground environment rebuilt successfully."
 echo ""
