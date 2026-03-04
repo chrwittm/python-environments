@@ -11,10 +11,14 @@ Shared helper scripts are stored under the `helpers/` folder.
 
 ## 🧩 Repository Structure
 
-```test
+```text
 python-environments/
 ├── helpers/
 │   └── ensure_no_env.sh           # aborts if any environment is active
+│
+├── claude-code/
+│   ├── claude-code.yml            # environment for Office and PDF document processing
+│   └── rebuild_claude-code.sh     # rebuild script for claude-code
 │
 ├── playground/
 │   ├── playground.yml             # lightweight experimental environment
