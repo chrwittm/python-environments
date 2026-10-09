@@ -20,6 +20,10 @@ python-environments/
 │   ├── claude-code.yml            # environment for Office and PDF document processing
 │   └── rebuild_claude-code.sh     # rebuild script for claude-code
 │
+├── fastai-latest/
+│   ├── fastai-latest.yml          # environment for FastAI + PyTorch on Apple Silicon
+│   └── rebuild_fastai-latest.sh   # rebuild script for fastai-latest
+│
 ├── playground/
 │   ├── playground.yml             # lightweight experimental environment
 │   └── rebuild_playground.sh      # rebuild script for playground
@@ -27,6 +31,10 @@ python-environments/
 ├── quarto-blogging/
 │   ├── quarto-blogging.yml        # environment for nbdev + Quarto publishing
 │   └── rebuild_quarto-blogging.sh # rebuild script for blogging setup
+│
+└── sap-gen-ai/
+    ├── sap-gen-ai.yml             # environment for SAP Generative AI Hub SDK
+    └── rebuild_sap-gen-ai.sh      # rebuild script for sap-gen-ai
 ```
 
 ## 🧰 Usage
