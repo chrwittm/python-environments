@@ -1,24 +1,19 @@
 #!/usr/bin/env bash
 set -e  # exit on first error
 
+# Resolve paths relative to this script, regardless of the working directory.
+rebuild_script_dir="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
 echo "🔄 Rebuilding FastAI-Latest environment..."
 
-# Load Conda functions
-source ~/miniforge3/etc/profile.d/conda.sh
-
-# Abort if any environment is currently active
-if [ -n "$CONDA_DEFAULT_ENV" ]; then
-  echo "❌ An environment ('$CONDA_DEFAULT_ENV') is currently active."
-  echo "Please deactivate all environments before rebuilding."
-  echo "run: conda deactivate"
-  exit 1
-fi
+# Source shared safety check
+source "$rebuild_script_dir/../helpers/ensure_no_env.sh"
 
 # Remove existing environment if it exists
 conda remove -n fastai-latest --all -y || true
 
 # Recreate from YAML
-conda env create -f fastai-latest.yml
+conda env create -f "$rebuild_script_dir/fastai-latest.yml"
 
 echo ""
 echo "✅ FastAI-Latest environment rebuilt successfully."

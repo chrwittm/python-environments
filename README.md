@@ -39,7 +39,14 @@ python-environments/
 
 ## 🧰 Usage
 
-To rebuild an environment, navigate to its folder and run the rebuild script:
+Rebuild scripts resolve their helper and YAML paths relative to their own location,
+so they can be run from any working directory. For example, from the repository root:
+
+```bash
+bash playground/rebuild_playground.sh
+```
+
+Or from the environment's folder:
 
 ```bash
 cd playground
