@@ -20,6 +20,13 @@ python-environments/
 │   ├── claude-code.yml            # environment for Office and PDF document processing
 │   └── rebuild_claude-code.sh     # rebuild script for claude-code
 │
+├── codex/
+│   ├── codex.yml                  # pinned shared helpers and skill validation
+│   ├── rebuild_codex.sh           # deliberate recreation or recovery
+│   ├── run_python.sh              # Python without activation or rebuilding
+│   ├── README.md                  # setup and usage on macOS/Linux
+│   └── locks/osx-arm64.explicit.txt # exact tested macOS package builds
+│
 ├── fastai-latest/
 │   ├── fastai-latest.yml          # environment for FastAI + PyTorch on Apple Silicon
 │   └── rebuild_fastai-latest.sh   # rebuild script for fastai-latest
@@ -66,6 +73,18 @@ conda activate playground
 ```
 
 ## 🧠 Notes
+
+See [codex/README.md](codex/README.md) for the Codex Python environment's setup,
+usage, verification, and macOS/Linux provisioning.
+
+Normal Codex helper usage does **not** recreate the environment:
+
+```bash
+bash codex/run_python.sh --version
+```
+
+The new Codex scripts and shared safety helper accept `MINIFORGE_ROOT` explicitly
+when Miniforge is installed somewhere other than `$HOME/miniforge3`.
 
 - All environments are managed by Miniforge (Conda/Mamba).
 - The base environment is kept clean and used only as a factory for creating other environments.

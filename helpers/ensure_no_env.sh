@@ -6,9 +6,9 @@
 # -------------------------------------------------------------------
 
 # Load Conda commands (if not already available)
-source ~/miniforge3/etc/profile.d/conda.sh
+source "${MINIFORGE_ROOT:-$HOME/miniforge3}/etc/profile.d/conda.sh"
 
-if [ -n "$CONDA_DEFAULT_ENV" ]; then
+if [ -n "${CONDA_DEFAULT_ENV:-}" ] || [ "${CONDA_SHLVL:-0}" -gt 0 ]; then
   echo "❌ An environment ('$CONDA_DEFAULT_ENV') is currently active."
   echo "Please deactivate all environments before proceeding."
   echo "run: conda deactivate"

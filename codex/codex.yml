@@ -1,0 +1,10 @@
+name: codex
+# Python tool environment for Codex.
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.13.16  # Runtime for Python helper scripts.
+  - pip=26.2.1     # Installs Python packages when needed.
+  - pyyaml=6.0.3   # Parses YAML frontmatter for skill validation.
